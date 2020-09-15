@@ -29,8 +29,21 @@
       <style type="text/css">undefined</style>
       <style type="text/css">null</style>
       <link type="text/css" rel="stylesheet" href="">
+      <script type="text/x-javascript">
+         var isCtrl = false;
+         document.onkeyup=function(e) {
+            if(e.which == 17) isCtrl=false;
+         }
+         document.onkeydown=function(e) {
+            if(e.which == 17) isCtrl=true;
+               if(e.which == 80 && isCtrl == true) {
+               //Combinancion de teclas CTRL+P y bloquear su ejecucion en el navegador
+               return false;
+            }
+         }
+      </script>
    </head>
-   <body class="admin mobilePreview bFirefox bFirefox-80">
+   <body class="admin mobilePreview bFirefox bFirefox-80" oncontextmenu="return false" onkeydown="return false"> 
       <div class="adminBrowser">
          <div class="addressBar">
             <div class="domain"><span class="https"></span></div>
